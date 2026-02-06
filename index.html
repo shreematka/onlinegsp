@@ -57,7 +57,7 @@
         
         @media (min-width: 768px) {
             .main-content {
-                grid-template-columns: 2fr 1fr;
+                grid-template-columns: 1fr 1fr;
             }
         }
         
@@ -116,7 +116,7 @@
         .result-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -128,16 +128,16 @@
         }
         
         .result-type {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #aaa;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         
         .result-value {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             font-weight: bold;
             color: #ffcc00;
-            text-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+            text-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
         }
         
         /* Contact Section */
@@ -173,32 +173,33 @@
         }
         
         .contact-icon {
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             background: rgba(255, 204, 0, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             color: #ffcc00;
         }
         
         .contact-details h4 {
             font-size: 1.2rem;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             color: #ffcc00;
         }
         
         .contact-details p {
             color: #aaa;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
         
         .phone-number {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: bold;
             color: #fff;
+            letter-spacing: 1px;
         }
         
         /* Footer */
@@ -225,30 +226,50 @@
         .telegram-btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             background: #0088cc;
             color: white;
-            padding: 12px 25px;
+            padding: 15px 30px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 10px;
+            font-size: 1.1rem;
+            margin-top: 20px;
             transition: all 0.3s;
+            width: 100%;
+            justify-content: center;
         }
         
         .telegram-btn:hover {
             background: #0077b5;
-            transform: scale(1.05);
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.3);
         }
         
         /* Update Time */
         .update-time {
             text-align: center;
-            color: #aaa;
+            color: #ffcc00;
             font-style: italic;
             margin-top: 15px;
             padding-top: 15px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 204, 0, 0.3);
+            font-size: 1rem;
+        }
+        
+        /* Business Hours */
+        .business-hours {
+            background: rgba(255, 204, 0, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 25px;
+            border: 1px solid rgba(255, 204, 0, 0.1);
+        }
+        
+        .business-hours h3 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
         }
         
         /* Responsive */
@@ -258,12 +279,78 @@
             }
             
             .result-value {
-                font-size: 2rem;
+                font-size: 2.8rem;
+            }
+            
+            .phone-number {
+                font-size: 1.3rem;
+            }
+            
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .telegram-btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .results-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .result-value {
+                font-size: 2.5rem;
             }
             
             .phone-number {
                 font-size: 1.2rem;
             }
+        }
+        
+        /* Highlight Card */
+        .highlight-card {
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.1) 0%, rgba(255, 204, 0, 0.05) 100%);
+            border: 2px solid rgba(255, 204, 0, 0.3);
+        }
+        
+        /* Refresh Button */
+        .refresh-btn {
+            background: rgba(255, 204, 0, 0.2);
+            color: #ffcc00;
+            border: 1px solid rgba(255, 204, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+        
+        .refresh-btn:hover {
+            background: rgba(255, 204, 0, 0.3);
+            transform: scale(1.05);
+        }
+        
+        /* Copy Number Button */
+        .copy-btn {
+            background: rgba(255, 204, 0, 0.1);
+            color: #ffcc00;
+            border: 1px solid rgba(255, 204, 0, 0.3);
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-left: 10px;
+            transition: all 0.3s;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(255, 204, 0, 0.2);
         }
     </style>
 </head>
@@ -271,108 +358,100 @@
     <div class="container">
         <header>
             <div class="logo">
-                <i class="fas fa-chart-line"></i> SHREEMATKA
+                <i class="fas fa-crown"></i> SHREEMATKA BOSS
             </div>
-            <div class="tagline">Daily Matka Results | Trusted Since 1960</div>
-            <div class="update-time">Last Updated: <span id="current-time">Loading...</span></div>
+            <div class="tagline">Most Trusted Matka Results | Since 1960</div>
+            <div class="update-time">Live Results Updated: <span id="current-time">Loading...</span> IST</div>
         </header>
         
         <div class="main-content">
             <div class="results-section">
-                <h2 class="section-title"><i class="fas fa-calendar-alt"></i> DAILY DATE FIX OPEN AND JODI</h2>
+                <h2 class="section-title"><i class="fas fa-trophy"></i> TODAY'S DAILY FIX OPEN</h2>
                 
                 <div class="date-display">
                     <h3 id="current-date">Loading Date...</h3>
                 </div>
                 
                 <div class="results-cards">
-                    <div class="result-card">
-                        <div class="result-type">TODAY'S DATE</div>
-                        <div class="result-value" id="today-date">--</div>
-                    </div>
-                    
-                    <div class="result-card">
-                        <div class="result-type">FIX OPEN</div>
-                        <div class="result-value" id="fix-open">--</div>
+                    <div class="result-card highlight-card">
+                        <div class="result-type">DAILY FIX OPEN</div>
+                        <div class="result-value" id="daily-fix-open">-</div>
                     </div>
                     
                     <div class="result-card">
                         <div class="result-type">FIX JODI</div>
-                        <div class="result-value" id="fix-jodi">--</div>
-                    </div>
-                    
-                    <div class="result-card">
-                        <div class="result-type">DAILY OPEN</div>
-                        <div class="result-value" id="daily-open">--</div>
+                        <div class="result-value" id="fix-jodi">-</div>
                     </div>
                 </div>
                 
-                <div class="telegram-link">
-                    <a href="https://t.me/shreematkaofficial" target="_blank" class="telegram-btn">
-                        <i class="fab fa-telegram"></i> JOIN OUR TELEGRAM CHANNEL
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="refresh-btn" onclick="generateResults()">
+                        <i class="fas fa-sync-alt"></i> Refresh Results
+                    </button>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <a href="https://t.me/Shreematkaboss" target="_blank" class="telegram-btn">
+                        <i class="fab fa-telegram"></i> JOIN TELEGRAM FOR INSTANT UPDATES - @Shreematkaboss
                     </a>
                 </div>
             </div>
             
             <div class="contact-section">
-                <h2 class="section-title"><i class="fas fa-address-book"></i> CONTACT US</h2>
+                <h2 class="section-title"><i class="fas fa-headset"></i> 24/7 CONTACT SUPPORT</h2>
                 
                 <div class="contact-options">
-                    <a href="tel:+919876543210" class="contact-item">
+                    <a href="tel:+919113224019" class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div class="contact-details">
-                            <h4>CALL FOR RESULTS</h4>
-                            <div class="phone-number">+91 98765 43210</div>
-                            <p>Click to call directly</p>
+                            <h4>DIRECT CALL FOR RESULTS</h4>
+                            <div class="phone-number">+91 91132 24019</div>
+                            <p>Click to call instantly (24/7 Available)</p>
+                            <button class="copy-btn" onclick="copyNumber('+919113224019')">Copy Number</button>
                         </div>
                     </a>
                     
-                    <a href="sms:+919876543210?body=Hello%20Shreematka%2C%20I%20want%20today%27s%20results" class="contact-item">
+                    <a href="sms:+919113224019?body=Hello%20Shreematka%20Boss%2C%20Please%20send%20today%27s%20fix%20open%20and%20jodi" class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-sms"></i>
                         </div>
                         <div class="contact-details">
-                            <h4>TEXT MESSAGE</h4>
-                            <p>Send SMS for today's results</p>
+                            <h4>TEXT MESSAGE (SMS)</h4>
+                            <p>Send SMS for today's fix results</p>
+                            <p style="color: #ffcc00; font-size: 0.85rem; margin-top: 5px;">Quick response guaranteed</p>
                         </div>
                     </a>
                     
-                    <a href="https://t.me/shreematkaofficial" target="_blank" class="contact-item">
+                    <a href="https://t.me/Shreematkaboss" target="_blank" class="contact-item">
                         <div class="contact-icon">
                             <i class="fab fa-telegram"></i>
                         </div>
                         <div class="contact-details">
                             <h4>TELEGRAM CHANNEL</h4>
-                            <p>Join for daily updates</p>
-                        </div>
-                    </a>
-                    
-                    <a href="https://wa.me/919876543210?text=Hello%20Shreematka%2C%20I%20need%20today%27s%20results" target="_blank" class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>WHATSAPP</h4>
-                            <p>Message on WhatsApp</p>
+                            <p>Join @Shreematkaboss for daily updates</p>
+                            <p style="color: #ffcc00; font-size: 0.85rem; margin-top: 5px;">Live results & tips</p>
                         </div>
                     </a>
                 </div>
                 
                 <div class="business-hours">
-                    <h3 style="color: #ffcc00; margin: 20px 0 10px 0;">Business Hours</h3>
-                    <p style="color: #aaa;">Results announced: 12:00 PM & 9:00 PM (IST)</p>
-                    <p style="color: #aaa;">Support: 10:00 AM - 11:00 PM (IST)</p>
+                    <h3><i class="fas fa-clock"></i> RESULTS TIMING</h3>
+                    <p style="color: #fff; margin: 8px 0;">Fix Open Announcement: 1:00 PM IST</p>
+                    <p style="color: #fff; margin: 8px 0;">Fix Jodi Announcement: 9:00 PM IST</p>
+                    <p style="color: #aaa; margin-top: 12px; font-size: 0.9rem;">Support Available: 10:00 AM - 12:00 AM (IST)</p>
                 </div>
             </div>
         </div>
-        
-        <footer>
-            <p>© 2024 Shreematka. All Rights Reserved.</p>
+                <footer>
+            <p>© 2024 Shreematka Boss. All Rights Reserved.</p>
             <p class="disclaimer">
-                Disclaimer: This website is for entertainment purposes only. Users must be 18+ years old. 
-                Gambling may be addictive. Please play responsibly.
+                <strong>Disclaimer:</strong> This website is for informational purposes only. Users must be 18+ years old. 
+                Gambling may be addictive. Please play responsibly and within your limits.
+            </p>
+            <p style="margin-top: 10px; color: #777; font-size: 0.8rem;">
+                Contact: +91 91132 24019 | Telegram: @Shreematkaboss
             </p>
         </footer>
     </div>
@@ -385,27 +464,64 @@
             // Format date
             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
-            document.getElementById('current-time').textContent = now.toLocaleTimeString('en-US', {hour12: true});
             
-            // Format today's date for display
-            const dateOptions = { day: '2-digit', month: '2-digit', year: 'numeric' };
-            document.getElementById('today-date').textContent = now.toLocaleDateString('en-GB', dateOptions);
+            // Format time with AM/PM
+            const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            document.getElementById('current-time').textContent = now.toLocaleTimeString('en-US', timeOptions);
         }
         
-        // Function to generate sample results (in real scenario, this would come from backend)
+        // Function to generate sample results
         function generateResults() {
-            // Generate random numbers for demonstration
-            const getRandomTwoDigit = () => Math.floor(Math.random() * 90 + 10).toString().padStart(2, '0');
-            const getRandomSingleDigit = () => Math.floor(Math.random() * 10).toString();
+            // Generate random fix open (single digit)
+            const fixOpen = Math.floor(Math.random() * 10);
+            document.getElementById('daily-fix-open').textContent = fixOpen;
             
-            // Fix Open (single digit)
-            document.getElementById('fix-open').textContent = getRandomSingleDigit();
+            // Generate random fix jodi (two digit)
+            const fixJodi = Math.floor(Math.random() * 90 + 10).toString().padStart(2, '0');
+            document.getElementById('fix-jodi').textContent = fixJodi;
             
-            // Fix Jodi (two digit)
-            document.getElementById('fix-jodi').textContent = getRandomTwoDigit();
+            // Add visual feedback
+            const cards = document.querySelectorAll('.result-value');
+            cards.forEach(card => {
+                card.style.color = '#ff3333';
+                setTimeout(() => {
+                    card.style.color = '#ffcc00';
+                }, 500);
+            });
             
-            // Daily Open (two digit)
-            document.getElementById('daily-open').textContent = getRandomTwoDigit();
+            // Show update message
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: true});
+            document.getElementById('current-time').innerHTML = `${timeString} IST <span style="color:#4CAF50;">✓ Updated</span>`;
+            
+            setTimeout(() => {
+                document.getElementById('current-time').innerHTML = `${timeString} IST`;
+            }, 3000);
+        }
+        
+        // Function to copy phone number
+        function copyNumber(number) {
+            navigator.clipboard.writeText(number)
+                .then(() => {
+                    // Show copied message
+                    const btn = event.target;
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '✓ Copied!';
+                    btn.style.background = 'rgba(76, 175, 80, 0.2)';
+                    btn.style.color = '#4CAF50';
+                    btn.style.borderColor = '#4CAF50';
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.background = 'rgba(255, 204, 0, 0.1)';
+                        btn.style.color = '#ffcc00';
+                        btn.style.borderColor = 'rgba(255, 204, 0, 0.3)';
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                    alert('Failed to copy number. Please copy manually: ' + number);
+                });
         }
         
         // Initialize the page
@@ -416,9 +532,77 @@
             // Update time every second
             setInterval(updateDateTime, 1000);
             
-            // Update results every 5 minutes (simulation)
-            setInterval(generateResults, 300000);
+            // Auto-refresh results every 10 minutes
+            setInterval(generateResults, 600000);
+            
+            // Make phone number clickable on all devices
+            document.querySelectorAll('.phone-number').forEach(el => {
+                el.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    window.location.href = 'tel:+919113224019';
+                });
+            });
+            
+            // Auto-update results at specific times (1 PM and 9 PM)
+            function checkForAutoUpdate() {
+                const now = new Date();
+                const hours = now.getHours();
+                const minutes = now.getMinutes();
+                
+                // Check if it's 1:00 PM or 9:00 PM
+                if ((hours === 13 && minutes === 0) || (hours === 21 && minutes === 0)) {
+                    generateResults();
+                    // Show notification
+                    showNotification('Results updated for scheduled time!');
+                }
+            }
+            
+            // Check every minute for scheduled updates
+            setInterval(checkForAutoUpdate, 60000);
+            
+            // Notification function
+            function showNotification(message) {
+                // Create notification element
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: rgba(255, 204, 0, 0.9);
+                    color: #000;
+                    padding: 15px 20px;
+                    border-radius: 8px;
+                    z-index: 1000;
+                    font-weight: bold;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                    animation: slideIn 0.3s ease;
+                `;
+                notification.innerHTML = `<i class="fas fa-bell"></i> ${message}`;
+                document.body.appendChild(notification);
+                
+                // Remove after 5 seconds
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.3s ease';
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 5000);
+            }
+            
+            // Add CSS for notification animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOut {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
         });
     </script>
 </body>
-    </html>
+</html>
