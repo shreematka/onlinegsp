@@ -203,44 +203,6 @@
 .image-item:hover img {
     transform: scale(1.05);
 }
-
-.image-placeholder {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255, 204, 0, 0.1), rgba(255, 153, 0, 0.1));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.image-placeholder i {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: rgba(255, 204, 0, 0.3);
-}
-
-.image-upload-btn {
-    background: linear-gradient(135deg, #ffcc00 0%, #ff9900 100%);
-    color: #000;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    transition: all 0.3s;
-}
-
-.image-upload-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3);
-    }
         /* Contact Section */
 .contact-section {
     background: rgba(255, 255, 255, 0.03);
@@ -349,7 +311,7 @@
     margin-bottom: 15px;
     font-family: 'Montserrat', sans-serif;
     text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
-}
+        }
         .action-buttons {
     display: flex;
     gap: 15px;
@@ -502,7 +464,7 @@
 .telegram-btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 136, 204, 0.4);
-}
+                                }
         /* Footer */
 .footer {
     text-align: center;
@@ -659,7 +621,7 @@
     .image-grid {
         grid-template-columns: 1fr;
     }
-}
+                }
                 @media (max-width: 480px) {
             .logo-text {
                 font-size: 2rem;
@@ -726,10 +688,9 @@
         <header class="header animate-in">
             <div class="logo-container">
                 <div class="logo-image-container">
-                    <div class="logo-placeholder" id="logoImage">
-                        <!-- Your logo image will appear here -->
-                        <img src="" alt="Shreematka Boss Logo" id="logoImg" style="display: none;">
-                        <i class="fas fa-crown" style="font-size: 4rem; color: rgba(255, 204, 0, 0.5);"></i>
+                    <div class="logo-placeholder">
+                        <!-- Add your logo image URL here -->
+                        <img src="https://via.placeholder.com/180x180/FFCC00/000000?text=LOGO" alt="Shreematka Boss Logo">
                     </div>
                 </div>
                 <div>
@@ -749,43 +710,31 @@
                 </p>
                 
                 <div class="image-grid">
-                    <div class="image-item" onclick="openImageModal(this)">
-                        <div class="image-placeholder">
-                            <i class="fas fa-image"></i>
-                            <span>Result Image 1</span>
-                        </div>
-                        <img src="" alt="Result 1" style="display: none;">
+                    <!-- Image 1 - Add your image URL here -->
+                    <div class="image-item" onclick="openImageModal('img1')">
+                        <img src="https://via.placeholder.com/400x300/FF9900/000000?text=RESULT+1" alt="Result 1" id="img1">
                     </div>
                     
-                    <div class="image-item" onclick="openImageModal(this)">
-                        <div class="image-placeholder">
-                            <i class="fas fa-image"></i>
-                            <span>Result Image 2</span>
-                        </div>
-                        <img src="" alt="Result 2" style="display: none;">
+                    <!-- Image 2 - Add your image URL here -->
+                    <div class="image-item" onclick="openImageModal('img2')">
+                        <img src="https://via.placeholder.com/400x300/FF9900/000000?text=RESULT+2" alt="Result 2" id="img2">
                     </div>
                     
-                    <div class="image-item" onclick="openImageModal(this)">
-                        <div class="image-placeholder">
-                            <i class="fas fa-image"></i>
-                            <span>Result Image 3</span>
-                        </div>
-                        <img src="" alt="Result 3" style="display: none;">
+                    <!-- Image 3 - Add your image URL here -->
+                    <div class="image-item" onclick="openImageModal('img3')">
+                        <img src="https://via.placeholder.com/400x300/FF9900/000000?text=RESULT+3" alt="Result 3" id="img3">
                     </div>
                     
-                    <div class="image-item" onclick="openImageModal(this)">
-                        <div class="image-placeholder">
-                            <i class="fas fa-image"></i>
-                            <span>Result Image 4</span>
-                        </div>
-                        <img src="" alt="Result 4" style="display: none;">
+                    <!-- Image 4 - Add your image URL here -->
+                    <div class="image-item" onclick="openImageModal('img4')">
+                        <img src="https://via.placeholder.com/400x300/FF9900/000000?text=RESULT+4" alt="Result 4" id="img4">
                     </div>
                 </div>
                 
-                <div style="text-align: center;">
-                    <button class="image-upload-btn" onclick="uploadImage()">
-                        <i class="fas fa-cloud-upload-alt"></i> Add Your Images
-                    </button>
+                <div style="text-align: center; margin-top: 20px;">
+                    <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.9rem;">
+                        <i class="fas fa-info-circle"></i> Click on images to view full size
+                    </p>
                 </div>
             </section>
                     <!-- Contact Section -->
@@ -851,11 +800,8 @@
         <!-- Telegram Section -->
         <section class="telegram-section animate-in delay-3">
             <div class="telegram-image">
-                <img src="" alt="Telegram Screenshot" id="telegramImg" style="display: none;">
-                <div class="image-placeholder" style="height: 100%;">
-                    <i class="fab fa-telegram" style="font-size: 4rem; color: rgba(0, 136, 204, 0.3);"></i>
-                    <span>Telegram Screenshot</span>
-                </div>
+                <!-- Add your Telegram screenshot URL here -->
+                <img src="https://via.placeholder.com/400x250/0088cc/ffffff?text=TELEGRAM+SCREENSHOT" alt="Telegram Screenshot">
             </div>
             
             <div class="telegram-content">
@@ -910,66 +856,14 @@
     </div>
 </div>
     <script>
-        // Image Upload Functionality
-        function uploadImage() {
-            // Create file input
-            const fileInput = document.createElement('input');
-            fileInput.type = 'file';
-            fileInput.accept = 'image/*';
-            fileInput.multiple = true;
-            
-            fileInput.onchange = function(e) {
-                const files = e.target.files;
-                const imageItems = document.querySelectorAll('.image-item');
-                
-                for (let i = 0; i < Math.min(files.length, imageItems.length); i++) {
-                    const file = files[i];
-                    const reader = new FileReader();
-                    
-                    reader.onload = function(event) {
-                        const imageItem = imageItems[i];
-                        const img = imageItem.querySelector('img');
-                        const placeholder = imageItem.querySelector('.image-placeholder');
-                        
-                        img.src = event.target.result;
-                        img.style.display = 'block';
-                        placeholder.style.display = 'none';
-                        
-                        // Show success message
-                        showNotification(`Image ${i + 1} uploaded successfully!`, 'success');
-                    };
-                    
-                    reader.readAsDataURL(file);
-                }
-                
-                // Also allow logo upload
-                if (files.length > 0) {
-                    const reader = new FileReader();
-                    reader.onload = function(event) {
-                        const logoImg = document.getElementById('logoImg');
-                        const logoPlaceholder = document.querySelector('.logo-placeholder i');
-                        
-                        logoImg.src = event.target.result;
-                        logoImg.style.display = 'block';
-                        logoPlaceholder.style.display = 'none';
-                        
-                        showNotification('Logo uploaded successfully!', 'success');
-                    };
-                    reader.readAsDataURL(files[0]);
-                }
-            };
-            
-            fileInput.click();
-        }
-        
         // Open image modal
-        function openImageModal(element) {
-            const img = element.querySelector('img');
-            if (img.src) {
+        function openImageModal(imgId) {
+            const imgElement = document.getElementById(imgId);
+            if (imgElement && imgElement.src) {
                 const modal = document.getElementById('imageModal');
                 const modalImg = document.getElementById('modalImage');
                 
-                modalImg.src = img.src;
+                modalImg.src = imgElement.src;
                 modal.style.display = 'flex';
                 
                 // Prevent body scroll
@@ -1042,6 +936,20 @@
             
             document.body.appendChild(notification);
             
+            // Add CSS for animations
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideInRight {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOutRight {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
             // Remove after 4 seconds
             setTimeout(() => {
                 notification.style.animation = 'slideOutRight 0.3s ease';
@@ -1052,26 +960,6 @@
                 }, 300);
             }, 4000);
         }
-        
-        // Add CSS for animations
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideInRight {
-                from { transform: translateX(100%); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-            @keyframes slideOutRight {
-                from { transform: translateX(0); opacity: 1; }
-                to { transform: translateX(100%); opacity: 0; }
-            }
-            .notification {
-                position: fixed;
-                top: 30px;
-                right: 30px;
-                z-index: 10000;
-            }
-        `;
-        document.head.appendChild(style);
         
         // Initialize page animations
         document.addEventListener('DOMContentLoaded', function() {
@@ -1086,7 +974,38 @@
                     this.style.transform = 'translateY(0)';
                 });
             });
+            
+            // Add keyboard shortcut for modal
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeImageModal();
+                }
+            });
         });
+        
+        // Instructions for adding your own images
+        console.log(`
+        =============================================
+        INSTRUCTIONS TO ADD YOUR OWN IMAGES:
+        =============================================
+        
+        1. LOGO IMAGE:
+           Replace: https://via.placeholder.com/180x180/FFCC00/000000?text=LOGO
+           With: Your logo image URL
+        
+        2. GALLERY IMAGES (4 images):
+           Replace: https://via.placeholder.com/400x300/FF9900/000000?text=RESULT+1
+           Replace: https://via.placeholder.com/400x300/FF9900/000000?text=RESULT+2
+           Replace: https://via.placeholder.com/400x300/FF9900/000000?text=RESULT+3
+           Replace: https://via.placeholder.com/400x300/FF9900/000000?text=RESULT+4
+           With: Your actual result image URLs
+        
+        3. TELEGRAM SCREENSHOT:
+           Replace: https://via.placeholder.com/400x250/0088cc/ffffff?text=TELEGRAM+SCREENSHOT
+           With: Your Telegram channel screenshot URL
+        
+        =============================================
+        `);
     </script>
 </body>
 </html>
